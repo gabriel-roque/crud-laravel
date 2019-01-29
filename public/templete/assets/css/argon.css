@@ -379,6 +379,31 @@ button::-moz-focus-inner,
     border-style: none;
 }
 
+
+.icon-edit{
+    color: #ffffff;
+}
+
+.icon-delete{
+    color: #ffffff;
+}
+
+.icon-edit:hover{
+    color: #87d524;
+    transition-duration: 0.5s;
+}
+
+.icon-delete:hover{
+    color: #d51721;
+    transition-duration: 0.5s;
+}
+
+.add-button:hover{
+    color: #8fd51f;
+    transition-duration: 0.5s;
+
+}
+
 input[type='radio'],
 input[type='checkbox']
 {

@@ -32,7 +32,7 @@
                             <td>{{$cliente->carga}}</td>
                             <td>{{$loop->index+1}} / {{$loop->count}}</td>
                             <td>
-                                <a href="#"><i class="fas fa-user-edit icon-edit"></i></a>
+                                <a href="{{url("/crud/edit/$cliente->id")}}"><i class="fas fa-user-edit icon-edit"></i></a>
                                 <a href="{{url("/crud/del/$cliente->id")}}"><i class="fas fa-user-minus icon-delete"></i></a>
                             </td>
                         </tr>

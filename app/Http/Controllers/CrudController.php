@@ -9,6 +9,14 @@ use Illuminate\Support\Facades\DB;
 class CrudController extends Controller
 {
     /**
+     * CrudController constructor.
+     */
+    public function __construct(Clientes $clientes)
+    {
+        $this->cliente = $clientes;
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -71,7 +79,13 @@ class CrudController extends Controller
      */
     public function edit($id)
     {
-        //
+        $title = "CRUD | Edit";
+        $estados = DB::table('estados')->get();
+        $cargas = DB::table('carga')->get();
+
+        $registro = $this->cliente->find($id);
+
+        return view('crud.edit', compact('title', 'estados', 'cargas', 'registro'));
     }
 
     /**

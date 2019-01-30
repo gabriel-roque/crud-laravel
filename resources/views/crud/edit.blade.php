@@ -3,8 +3,9 @@
 @section('conteudo')
 
 
-    <form  action="" method="POST">
+    <form action="{{route('crud.update', $registro->id)}}" method="POST">
         @csrf
+        {!! method_field('PUT') !!}
 
         <div class="form-group">
             <input value="{{$registro->nome}}" type="text" name="nome" class="form-control form-control-alternative" placeholder="Insira seu nome" required>
@@ -46,7 +47,6 @@
 
     </form>
 
-    {{--{{dd($registro)}}--}}
 
 
 

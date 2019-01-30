@@ -49,7 +49,7 @@ class CrudController extends Controller
 
         DB::table('clientes')->insert($dataform);
 
-        return dd($dataform);
+        return redirect('/');
     }
 
     /**

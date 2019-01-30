@@ -11,22 +11,27 @@
         <div class="form-group">
             <label for="estadoOP">Selecione o estado</label>
             <select class="form-control form-control-alternative" id="estadoOP" required>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+
+                @foreach ($estados as $estado)
+
+                    <option value="{{$estado->sigla}}">{{$estado->sigla}}</option>
+
+                @endforeach
+
             </select>
         </div>
+
 
         <div class="form-group">
             <label for="cargaOP">Selecione a Carga H.</label>
             <select class="form-control form-control-alternative" id="cargaOP" required>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+
+                @foreach ($cargas as $carga)
+
+                    <option value="{{$carga->horas}}">{{$carga->horas}}</option>
+
+                @endforeach
+
             </select>
         </div>
 

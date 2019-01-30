@@ -28,8 +28,11 @@ class CrudController extends Controller
      */
     public function create()
     {
+        $estados = DB::table('estados')->get();
+        $cargas = DB::table('carga')->get();
+
         $title = 'CRUD | Create';
-        return view('crud.create', compact('title'));
+        return view('crud.create', compact('title', 'estados', 'cargas'));
     }
 
     /**

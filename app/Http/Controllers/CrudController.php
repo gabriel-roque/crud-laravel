@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Clientes;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -43,7 +44,12 @@ class CrudController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //recupera todos os campos exeto o do token CSRF
+        $dataform = $request->except('_token');
+
+        DB::table('clientes')->insert($dataform);
+
+        return dd($dataform);
     }
 
     /**

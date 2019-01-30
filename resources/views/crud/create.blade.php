@@ -3,14 +3,15 @@
 @section('conteudo')
 
 
-    <form action="/">
+    <form  action="{{route('crud.store')}}" method="POST">
+        @csrf
         <div class="form-group">
-            <input type="text" class="form-control form-control-alternative" placeholder="Insira seu nome" required>
+            <input type="text" name="nome" class="form-control form-control-alternative" placeholder="Insira seu nome" required>
         </div>
 
         <div class="form-group">
             <label for="estadoOP">Selecione o estado</label>
-            <select class="form-control form-control-alternative" id="estadoOP" required>
+            <select name="estado" class="form-control form-control-alternative" id="estadoOP" required>
 
                 @foreach ($estados as $estado)
 
@@ -24,7 +25,7 @@
 
         <div class="form-group">
             <label for="cargaOP">Selecione a Carga H.</label>
-            <select class="form-control form-control-alternative" id="cargaOP" required>
+            <select name="carga" class="form-control form-control-alternative" id="cargaOP" required>
 
                 @foreach ($cargas as $carga)
 
@@ -35,7 +36,7 @@
             </select>
         </div>
 
-        <button type="submit" class="btn btn-success">Enviar</button>
+        <button type="submit" class="btn btn-success" value="submit">Enviar</button>
         <a href="/">
             <button type="button" class="btn btn-dark">Voltar</button>
         </a>

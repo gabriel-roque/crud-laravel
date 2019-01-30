@@ -54,7 +54,7 @@
                     <span class="btn-inner--text">Download Project</span>
                   </a>
                   <a href="https://github.com/gabriel-roque" class="btn btn-lg btn-github btn-icon mb-3 mb-sm-0" target="_blank">
-                    <span class="btn-inner--icon"><i class="fa fa-github"></i></span>
+                    <span class="btn-inner--icon"><i class="fab fa-github"></i></span>
                     <span class="btn-inner--text">
                       <span class="text-warning">Star us</span> on Github</span>
                   </a>
@@ -77,7 +77,13 @@
     </div>
 
     {{--CONTEUDO--}}
-    @yield('conteudo')
+    <section class="section section-components pb-0" id="section-components">
+        <div class="container">
+
+            @yield('conteudo')
+
+        </div>
+    </section>
 
 
 

@@ -15260,7 +15260,7 @@ a.btn-icon-only
     height: 2000px;
 
     content: '';
-    transform: skew(0, -8deg); 
+    transform: skew(0, -8deg);
 
     background: #f4f5f7;
 }

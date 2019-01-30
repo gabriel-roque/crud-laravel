@@ -1,4 +1,4 @@
-@extends('crud.templetes.home')
+@extends('crud.templetes.template_Dashboard')
 
 @section('conteudo')
 
@@ -23,28 +23,31 @@
                 </thead>
 
                 <tbody>
+                    @foreach ($clientes as $cliente)
 
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
-                    <td>
-                        <a href="#"><i class="fas fa-user-edit icon-edit"></i></a>
-                        <a href="#"><i class="fas fa-user-minus icon-delete"></i></a>
-                    </td>
-                </tr>
+                        <tr>
+                            <th scope="row">{{$cliente->id}}</th>
+                            <td>{{$cliente->nome}}</td>
+                            <td>{{$cliente->estado}}</td>
+                            <td>{{$cliente->carga}}</td>
+                            <td>{{$loop->index+1}} / {{$loop->count}}</td>
+                            <td>
+                                <a href="#"><i class="fas fa-user-edit icon-edit"></i></a>
+                                <a href="#"><i class="fas fa-user-minus icon-delete"></i></a>
+                            </td>
+                        </tr>
 
-
+                    @endforeach
                 </tbody>
 
             </table>
 
-            <button class="btn btn-icon btn-3 btn-primary" type="button">
-                <span class="btn-inner--icon"><i class="fas fa-ad"></i></span>
-                <span class="btn-inner--text">Adicionar</span>
-            </button>
+            <a href="{{url('/crud/create')}}">
+                <button class="btn btn-icon btn-3 btn-primary" type="button">
+                    <span class="btn-inner--icon"><i class="fas fa-ad"></i></span>
+                    <span class="btn-inner--text">Adicionar</span>
+                </button>
+            </a>
 
         </div>
 

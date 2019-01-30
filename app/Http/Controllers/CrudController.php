@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CrudController extends Controller
 {
@@ -13,8 +14,11 @@ class CrudController extends Controller
      */
     public function index()
     {
+
+        $clientes = DB::table('clientes')->get();
+
         $title = 'CRUD | Dashboard';
-        return view('crud.index', compact('title'));
+        return view('crud.index', compact('title', 'clientes'));
     }
 
     /**
@@ -24,7 +28,8 @@ class CrudController extends Controller
      */
     public function create()
     {
-        //
+        $title = 'CRUD | Create';
+        return view('crud.create', compact('title'));
     }
 
     /**

@@ -9,12 +9,12 @@ _PT-BR_
 
 3- Configure os campos de acordo com o seu SGBD, nome da base de dados e seu usuario de acesso:
 
-DB_CONNECTION=**mysql**
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=**DATABASENAME**
-DB_USERNAME=**USER**
-DB_PASSWORD=**PASS**
+DB_CONNECTION=**mysql**<br>
+DB_HOST=127.0.0.1<br>
+DB_PORT=3306<br>
+DB_DATABASE=**DATABASENAME**<br>
+DB_USERNAME=**USER**<br>
+DB_PASSWORD=**PASS**<br>
 
 4- `php artisan key:generete` --- ira gerar a chave da app laravel no arquivo .env
 
@@ -36,12 +36,12 @@ DB_PASSWORD=**PASS**
 
 3- Configure the fields according to your DBMS, database name and your access user:
 
-DB_CONNECTION=**mysql**
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=**DATABASENAME**
-DB_USERNAME=**USER**
-DB_PASSWORD=**PASS**
+DB_CONNECTION=**mysql**<br>
+DB_HOST=127.0.0.1<br>
+DB_PORT=3306<br>
+DB_DATABASE=**DATABASENAME**<br>
+DB_USERNAME=**USER**<br>
+DB_PASSWORD=**PASS**<br>
 
 4- `php artisan key: generete` --- will generate the laravel app key in the .env file
 

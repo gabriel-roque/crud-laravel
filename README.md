@@ -1,7 +1,8 @@
 
-_PT-BR_
 
-## Como Usar
+
+## Como Usar 
+_PT-BR_
 
 1- `git clone https://github.com/gabriel-roque/crud-laravel`
 
@@ -9,12 +10,12 @@ _PT-BR_
 
 3- Configure os campos de acordo com o seu SGBD, nome da base de dados e seu usuario de acesso:
 
-DB_CONNECTION=**mysql**
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=**DATABASENAME**
-DB_USERNAME=**USER**
-DB_PASSWORD=**PASS**
+DB_CONNECTION=**mysql**<br>
+DB_HOST=127.0.0.1<br>
+DB_PORT=3306<br>
+DB_DATABASE=**DATABASENAME**<br>
+DB_USERNAME=**USER**<br>
+DB_PASSWORD=**PASS**<br>
 
 4- `php artisan key:generete` --- ira gerar a chave da app laravel no arquivo .env
 
@@ -26,22 +27,22 @@ DB_PASSWORD=**PASS**
 
 
 
-*EUA*
 
-## How to use
+## How to use 
+*ENG*
 
 1- `git clone https://github.com/gabriel-roque/crud-laravel`
 
 2- Duplicate the env.example file to .env
 
-3- Configure the fields according to your DBMS, database name and your access user:
+3- Configure the fields according to your SGBD, database name and your access user:
 
-DB_CONNECTION=**mysql**
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=**DATABASENAME**
-DB_USERNAME=**USER**
-DB_PASSWORD=**PASS**
+DB_CONNECTION=**mysql**<br>
+DB_HOST=127.0.0.1<br>
+DB_PORT=3306<br>
+DB_DATABASE=**DATABASENAME**<br>
+DB_USERNAME=**USER**<br>
+DB_PASSWORD=**PASS**<br>
 
 4- `php artisan key: generete` --- will generate the laravel app key in the .env file
 
@@ -49,4 +50,4 @@ DB_PASSWORD=**PASS**
 
 6- `php artisan serve` --- start laravel service
 
-7- Access in the browser localhost: 8000
+7- Access in the browser `localhost:8000`

@@ -34,7 +34,7 @@ DB_PASSWORD=**PASS**<br>
 
 2- Duplicate the env.example file to .env
 
-3- Configure the fields according to your DBMS, database name and your access user:
+3- Configure the fields according to your SGBD, database name and your access user:
 
 DB_CONNECTION=**mysql**<br>
 DB_HOST=127.0.0.1<br>

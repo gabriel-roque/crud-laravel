@@ -49,4 +49,4 @@ DB_PASSWORD=**PASS**<br>
 
 6- `php artisan serve` --- start laravel service
 
-7- Access in the browser localhost: 8000
+7- Access in the browser `localhost:8000`

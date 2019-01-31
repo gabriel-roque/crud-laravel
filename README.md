@@ -1,7 +1,8 @@
 
-_PT-BR_
 
-## Como Usar
+
+## Como Usar 
+_PT-BR_
 
 1- `git clone https://github.com/gabriel-roque/crud-laravel`
 
@@ -26,9 +27,9 @@ DB_PASSWORD=**PASS**<br>
 
 
 
-*EUA*
 
-## How to use
+## How to use 
+*ENG*
 
 1- `git clone https://github.com/gabriel-roque/crud-laravel`
 

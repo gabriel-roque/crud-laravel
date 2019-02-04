@@ -83,7 +83,8 @@ class CrudController extends Controller
         $estados = DB::table('estados')->get();
         $cargas = DB::table('carga')->get();
 
-        $registro = $this->cliente->find($id);
+//        $registro = $this->cliente->find($id);
+        $registro = DB::table('clientes')->find($id);
 
         return view('crud.edit', compact('title', 'estados', 'cargas', 'registro'));
     }

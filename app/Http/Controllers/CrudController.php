@@ -24,7 +24,12 @@ class CrudController extends Controller
     public function index()
     {
 
-        $clientes = DB::table('clientes')->get();
+        $clientes = DB::table('clientes')
+            ->select('clientes.id', 'nome', 'estado', 'carga', 'cargo_id', 'nome_cargo')
+            ->whereNull('clientes.deleted_at')
+            ->join('cargo_clientes', 'cargo_id', '=', 'cargo_clientes.id')
+            ->get();
+
 
         $title = 'CRUD | Dashboard';
         return view('crud.index', compact('title', 'clientes'));

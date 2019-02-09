@@ -4,13 +4,9 @@
 
 
     <section class="section section-components pb-0" id="section-components">
-
         <div class="container">
-
             <table class="table table-hover table-dark">
-
                 <h4><strong>DASHBOARD <i class="ni ni-archive-2"></i></strong></h4><hr>
-
                 <thead>
                 <tr class="bg-primary">
                     <th scope="col"></th>
@@ -18,6 +14,7 @@
                     <th scope="col">Estado</th>
                     <th scope="col">Carga H.</th>
                     <th scope="col">Contagem</th>
+                    <th scope="col">Cargo</th>
                     <th scope="col">Actions</th>
                 </tr>
                 </thead>
@@ -31,6 +28,7 @@
                             <td>{{$cliente->estado}}</td>
                             <td>{{$cliente->carga}}</td>
                             <td>{{$loop->index+1}} / {{$loop->count}}</td>
+                            <td>{{$cliente->nome_cargo}}</td>
                             <td>
                                 <a href="{{url("/crud/edit/$cliente->id")}}"><i class="fas fa-user-edit icon-edit"></i></a>
                                 <a href="{{url("/crud/del/$cliente->id")}}"><i class="fas fa-user-minus icon-delete"></i></a>
@@ -39,7 +37,6 @@
 
                     @endforeach
                 </tbody>
-
             </table>
 
             <a href="{{url('/crud/create')}}">

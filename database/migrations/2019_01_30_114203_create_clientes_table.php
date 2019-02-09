@@ -18,6 +18,7 @@ class CreateClientesTable extends Migration
             $table->string('nome');
             $table->string('estado');
             $table->integer('carga');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

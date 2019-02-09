@@ -17,6 +17,7 @@ class ClienteSeeder extends Seeder
             'nome'=> 'Gabriel',
             'estado'=> 'DF',
             'carga'=> 30,
+            'cargo_id' => 1,
             'created_at'=> date("Y-m-d H:i:s"),
             'updated_at'=> date("Y-m-d H:i:s")
         ]);
@@ -25,6 +26,7 @@ class ClienteSeeder extends Seeder
             'nome'=> 'Marcos',
             'estado'=> 'GO',
             'carga'=> 45,
+            'cargo_id'=> 2,
             'created_at'=> date("Y-m-d H:i:s"),
             'updated_at'=> date("Y-m-d H:i:s")
         ]);
@@ -33,6 +35,7 @@ class ClienteSeeder extends Seeder
             'nome'=> 'Rafael',
             'estado'=> 'MG',
             'carga'=> 40,
+            'cargo_id'=> 3,
             'created_at'=> date("Y-m-d H:i:s"),
             'updated_at'=> date("Y-m-d H:i:s")
         ]);

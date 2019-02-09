@@ -13,9 +13,21 @@ class CargaHorariaSeeder extends Seeder
     public function run()
     {
         DB::table('carga')->insert([
-            ['horas'=>20],
-            ['horas'=>30],
-            ['horas'=>40]
+            [
+                'horas'=>20,
+                'created_at' => date("Y-m-d H:i:s"),
+                'updated_at' => date("Y-m-d H:i:s")
+            ],
+            [
+                'horas'=>30,
+                'created_at' => date("Y-m-d H:i:s"),
+                'updated_at' => date("Y-m-d H:i:s")
+            ],
+            [
+                'horas'=>40,
+                'created_at' => date("Y-m-d H:i:s"),
+                'updated_at' => date("Y-m-d H:i:s")
+            ]
         ]);
     }
 }

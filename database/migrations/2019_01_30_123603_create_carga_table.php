@@ -16,6 +16,7 @@ class CreateCargaTable extends Migration
         Schema::create('carga', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('horas');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -13,7 +13,7 @@ class CreateCargaTable extends Migration
      */
     public function up()
     {
-        Schema::create('carga', function (Blueprint $table) {
+        Schema::create('cargas', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('horas');
             $table->softDeletes();

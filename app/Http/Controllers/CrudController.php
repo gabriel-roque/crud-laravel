@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Carga;
 use App\Models\Clientes;
+use App\Models\Estado;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -42,8 +44,8 @@ class CrudController extends Controller
      */
     public function create()
     {
-        $estados = DB::table('estados')->get();
-        $cargas = DB::table('carga')->get();
+        $estados = Estado::all();
+        $cargas = Carga::all();
 
         $title = 'CRUD | Create';
         return view('crud.create', compact('title', 'estados', 'cargas'));

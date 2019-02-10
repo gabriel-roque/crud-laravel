@@ -94,13 +94,13 @@ class CrudController extends Controller
     public function edit($id)
     {
         $title = "CRUD | Edit";
-        $estados = DB::table('estados')->get();
-        $cargas = DB::table('carga')->get();
+        $estados = Estado::all();
+        $cargas = Carga::all();
+        $cargos = CargoCliente::all();
 
-//        $registro = $this->cliente->find($id);
-        $registro = DB::table('clientes')->find($id);
+        $registro = Clientes::find($id);
 
-        return view('crud.edit', compact('title', 'estados', 'cargas', 'registro'));
+        return view('crud.edit', compact('title', 'estados', 'cargas', 'registro', 'cargos'));
     }
 
     /**

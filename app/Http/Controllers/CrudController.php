@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ClienteFormRequest;
 use App\Models\Carga;
 use App\Models\CargoCliente;
 use App\Models\Clientes;
@@ -59,7 +60,7 @@ class CrudController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ClienteFormRequest $request)
     {
         $cliente = new Clientes();
         if (isset($cliente)){
@@ -110,7 +111,7 @@ class CrudController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ClienteFormRequest $request, $id)
     {
         $cliente = Clientes::find($id);
         if (isset($cliente)){

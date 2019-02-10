@@ -4,17 +4,25 @@
 
     <form  action="{{route('crud.store')}}" method="POST">
         @csrf
-        <div class="form-group">
-            <input type="text" name="nome" class="form-control form-control-alternative" placeholder="Insira seu nome">
+        <div class="form-group {{$errors->has('nome') ? 'has-danger' : ' '}}">
+            <input type="text" name="nome" class="form-control form-control-alternative
+            {{$errors->has('nome') ? 'is-invalid' : ' '}}" placeholder="Insira seu nome">
+            <div class="invalid-feedback">
+                {{$errors->first('nome')}}
+            </div>
         </div>
 
-        <div class="form-group">
+
+        <div class="form-group}}">
             <label for="estadoOP">Selecione o estado</label>
             <select name="estado" class="form-control form-control-alternative" id="estadoOP">
                 @foreach ($estados as $estado)
                     <option value="{{$estado->sigla}}">{{$estado->sigla}}</option>
                 @endforeach
             </select>
+            <div class="invalid-feedback">
+                {{$errors->first('estado')}}
+            </div>
         </div>
 
 
@@ -25,6 +33,9 @@
                     <option value="{{$carga->horas}}">{{$carga->horas}}</option>
                 @endforeach
             </select>
+            <div class="invalid-feedback">
+                {{$errors->first('carga')}}
+            </div>
         </div>
 
         <div class="form-group">
@@ -34,6 +45,9 @@
                     <option value="{{$cargo->id}}">{{$cargo->nome_cargo}}</option>
                 @endforeach
             </select>
+            <div class="invalid-feedback">
+                {{$errors->first('cargo')}}
+            </div>
         </div>
 
         <button type="submit" class="btn btn-success" value="submit">Enviar</button>

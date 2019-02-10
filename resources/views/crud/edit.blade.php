@@ -7,8 +7,10 @@
         @csrf
         {!! method_field('PUT') !!}
 
-        <div class="form-group">
-            <input value="{{$registro->nome}}" type="text" name="nome" class="form-control form-control-alternative" placeholder="Insira seu nome" required>
+        <div class="form-group {{$errors->has('nome') ? 'has-danger' : ' '}}">
+            <input value="{{$registro->nome}}" type="text" name="nome"
+                   class="form-control form-control-alternative
+                    {{$errors->has('nome') ? 'is-invalid' : ' '}}" placeholder="Insira seu nome">
         </div>
 
         <div class="form-group">

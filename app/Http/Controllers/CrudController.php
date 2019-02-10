@@ -112,11 +112,17 @@ class CrudController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data = $request->except('_token', '_method');
-
-        DB::table('clientes')->where('id', $id)->update($data);
-
-        return redirect('/');
+        $cliente = Clientes::find($id);
+        if (isset($cliente)){
+            $cliente->nome = $request->input('nome');
+            $cliente->estado = $request->input('estado');
+            $cliente->carga = $request->input('carga');
+            $cliente->cargo_id = $request->input('cargo_id');
+            $cliente->save();
+            return redirect('/');
+        }else{
+            return redirect('/');
+        }
     }
 
     /**

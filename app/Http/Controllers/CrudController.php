@@ -133,8 +133,12 @@ class CrudController extends Controller
      */
     public function destroy($id)
     {
-        DB::table('clientes')->delete($id);
-
-        return redirect('/');
+       $cliente = Clientes::find($id);
+       if (isset($cliente)){
+           $cliente->delete($id);
+           return redirect('/');
+       }else{
+           return redirect('/');
+       }
     }
 }

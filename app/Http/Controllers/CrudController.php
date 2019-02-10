@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Carga;
+use App\Models\CargoCliente;
 use App\Models\Clientes;
 use App\Models\Estado;
 use Illuminate\Http\Request;
@@ -46,9 +47,10 @@ class CrudController extends Controller
     {
         $estados = Estado::all();
         $cargas = Carga::all();
+        $cargos = CargoCliente::all();
 
         $title = 'CRUD | Create';
-        return view('crud.create', compact('title', 'estados', 'cargas'));
+        return view('crud.create', compact('title', 'estados', 'cargas', 'cargos'));
     }
 
     /**

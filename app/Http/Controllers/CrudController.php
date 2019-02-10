@@ -61,12 +61,17 @@ class CrudController extends Controller
      */
     public function store(Request $request)
     {
-        //recupera todos os campos exeto o do token CSRF
-        $dataform = $request->except('_token');
-
-        DB::table('clientes')->insert($dataform);
-
-        return redirect('/');
+        $cliente = new Clientes();
+        if (isset($cliente)){
+            $cliente->nome = $request->input('nome');
+            $cliente->estado = $request->input('estado');
+            $cliente->carga = $request->input('carga');
+            $cliente->cargo_id = $request->input('cargo_id');
+            $cliente->save();
+            return redirect('/');
+        }else{
+            return redirect('/');
+        }
     }
 
     /**

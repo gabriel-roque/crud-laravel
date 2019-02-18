@@ -39,5 +39,32 @@ class ClienteSeeder extends Seeder
             'created_at'=> date("Y-m-d H:i:s"),
             'updated_at'=> date("Y-m-d H:i:s")
         ]);
+
+        DB::table('clientes')->insert([
+            'nome'=> 'Camila',
+            'estado'=> 'SC',
+            'carga'=> 40,
+            'cargo_id'=> 2,
+            'created_at'=> date("Y-m-d H:i:s"),
+            'updated_at'=> date("Y-m-d H:i:s")
+        ]);
+
+        DB::table('clientes')->insert([
+            'nome'=> 'Ana Beatriz',
+            'estado'=> 'SP',
+            'carga'=> 40,
+            'cargo_id'=> 1,
+            'created_at'=> date("Y-m-d H:i:s"),
+            'updated_at'=> date("Y-m-d H:i:s")
+        ]);
+
+        DB::table('clientes')->insert([
+            'nome'=> 'Ramon Duques',
+            'estado'=> 'DF',
+            'carga'=> 40,
+            'cargo_id'=> 2,
+            'created_at'=> date("Y-m-d H:i:s"),
+            'updated_at'=> date("Y-m-d H:i:s")
+        ]);
     }
 }

@@ -26,7 +26,7 @@
 <body>
 
     <div class="position-relative">
-      <section class="section section-lg section-hero section-shaped">
+      <section class="section  section-hero section-shaped">
 
           <!-- Background circles -->
         <div class="shape shape-style-1 shape-primary">
@@ -42,7 +42,7 @@
           <span class="span-100"></span>
         </div>
 
-          <div class="container shape-container d-flex align-items-center py-lg">
+          <div class="container shape-container d-flex align-items-center">
           <div class="col px-0">
             <div class="row align-items-center justify-content-center">
               <div class="col-lg-6 text-center">

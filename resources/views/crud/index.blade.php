@@ -3,7 +3,7 @@
 @section('conteudo')
 
 
-    <section class="section section-components pb-0" id="section-components">
+    <section class=" section-components pb-0" id="section-components">
         <div class="container">
             <table class="table table-hover table-dark">
                 <h4><strong>DASHBOARD <i class="ni ni-archive-2"></i></strong></h4><hr>
@@ -48,7 +48,11 @@
 
         </div>
 
-    </section>
+    </section><hr>
 
-
+    <div class="container">
+        <div class="col">
+            {{ $paginator->links() }}
+        </div>
+    </div>
 @endsection

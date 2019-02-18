@@ -31,12 +31,11 @@ class CrudController extends Controller
         $clientes = DB::table('clientes')
             ->select('clientes.id', 'nome', 'estado', 'carga', 'cargo_id', 'nome_cargo')
             ->whereNull('clientes.deleted_at')
-            ->join('cargo_clientes', 'cargo_id', '=', 'cargo_clientes.id')
-            ->get();
-
+            ->join('cargo_clientes', 'cargo_id', '=', 'cargo_clientes.id')->paginate(3);
+        $paginator = Clientes::paginate(3);
 
         $title = 'CRUD | Dashboard';
-        return view('crud.index', compact('title', 'clientes'));
+        return view('crud.index', compact('title', 'clientes', 'paginator'));
     }
 
     /**

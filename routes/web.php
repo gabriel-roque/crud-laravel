@@ -3,7 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 
-Route::resource('/', 'CrudController');
+//Route::resource('/', 'CrudController');
+Route::get('/', 'CrudController@index')->name('home');
 
 Route::get('/crud/create', 'CrudController@create');
 

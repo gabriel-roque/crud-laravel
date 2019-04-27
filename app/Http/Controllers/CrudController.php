@@ -57,13 +57,7 @@ class CrudController extends Controller
      */
     public function store(ClienteFormRequest $request)
     {
-        $cliente = new Clientes();
-        if (isset($cliente)){
-            $cliente->nome = $request->input('nome');
-            $cliente->estado = $request->input('estado');
-            $cliente->carga = $request->input('carga');
-            $cliente->cargo_id = $request->input('cargo_id');
-            $cliente->save();
+        if(Clientes::armazenarCliente($request)){
             return redirect('/');
         }else{
             return redirect('/');

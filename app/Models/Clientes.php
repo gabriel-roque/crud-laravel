@@ -12,7 +12,7 @@ class Clientes extends Model
 {
     use SoftDeletes;
     protected $dates = ['deleted_at'];
-    protected $fillable = ['nome', 'estado', 'carga'];
+    protected $fillable = ['nome', 'estado', 'carga', 'cargo_id'];
 
 
     static function listarClientes()
@@ -22,5 +22,23 @@ class Clientes extends Model
             ->join('cargo_clientes', 'cargo_id', '=', 'cargo_clientes.id')->paginate(3);
 
     }
+
+    static function armazenarCliente($request)
+    {
+        $data =[
+            'nome' => request('nome'),
+            'estado' => request('estado'),
+            'carga' => request('carga'),
+            'cargo_id' => request('cargo_id'),
+        ];
+
+        if($data){
+            Clientes::create($data);
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 
 }

@@ -52,7 +52,7 @@
 
     <div class="container">
         <div class="col">
-            {{$paginator->links()}}
+            {{$clientes->links()}}
         </div>
     </div>
 @endsection

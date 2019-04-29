@@ -11,13 +11,6 @@ use Illuminate\Http\Request;
 
 class CrudController extends Controller
 {
-    /**
-     * CrudController constructor.
-     */
-    public function __construct(Clientes $clientes)
-    {
-        $this->cliente = $clientes;
-    }
 
     /**
      * Display a listing of the resource.
@@ -39,12 +32,12 @@ class CrudController extends Controller
      */
     public function create()
     {
-        $estados = Estado::all();
-        $cargas = Carga::all();
-        $cargos = CargoCliente::all();
-
-        $title = 'CRUD | Create';
-        return view('crud.create', compact('title', 'estados', 'cargas', 'cargos'));
+        return view('crud.create', [
+            'estados' => Estado::all('sigla'),
+            'cargas' => Carga::all('horas'),
+            'cargos' => CargoCliente::all('nome_cargo'),
+            'title' => 'CRUD | Create'
+        ]);
     }
 
     /**

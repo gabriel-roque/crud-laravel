@@ -25,15 +25,8 @@ class Clientes extends Model
 
     static function armazenarCliente($request)
     {
-        $data =[
-            'nome' => request('nome'),
-            'estado' => request('estado'),
-            'carga' => request('carga'),
-            'cargo_id' => request('cargo_id'),
-        ];
-
-        if($data){
-            Clientes::create($data);
+        if($request){
+            Clientes::create($request->all());
             return true;
         }else{
             return false;

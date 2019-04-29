@@ -8,7 +8,6 @@ use App\Models\CargoCliente;
 use App\Models\Clientes;
 use App\Models\Estado;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class CrudController extends Controller
 {
@@ -27,11 +26,10 @@ class CrudController extends Controller
      */
     public function index()
     {
-
-        $clientes = Clientes::listarClientes();
-
-        $title = 'CRUD | Dashboard';
-        return view('crud.index', compact('title', 'clientes', 'paginator'));
+        return view('crud.index',[
+            'clientes' => Clientes::listarClientes(),
+            'title' => 'CRUD | Dashboard'
+        ]);
     }
 
     /**

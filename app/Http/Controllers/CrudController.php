@@ -33,9 +33,9 @@ class CrudController extends Controller
     public function create()
     {
         return view('crud.create', [
-            'estados' => Estado::all('sigla'),
-            'cargas' => Carga::all('horas'),
-            'cargos' => CargoCliente::all('nome_cargo'),
+            'estados' => Estado::all(),
+            'cargas' => Carga::all(),
+            'cargos' => CargoCliente::all(),
             'title' => 'CRUD | Create'
         ]);
     }
@@ -75,9 +75,9 @@ class CrudController extends Controller
     public function edit($id)
     {
         return view('crud.edit', [
-            'estados' => Estado::all('sigla'),
-            'cargas' => Carga::all('horas'),
-            'cargos' => CargoCliente::all('nome_cargo'),
+            'estados' => Estado::all(),
+            'cargas' => Carga::all(),
+            'cargos' => CargoCliente::all(),
             'registro' => Clientes::find($id),
             'title' => 'CRUD | Edit'
         ]);

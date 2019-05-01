@@ -45,8 +45,16 @@ class Clientes extends Model
         }else{
             return false;
         }
-
     }
 
-
+    static function deletarCliente($id)
+    {
+        $cliente = Clientes::find($id);
+        if ($cliente){
+            $cliente->destroy($id);
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

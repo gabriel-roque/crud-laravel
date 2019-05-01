@@ -107,9 +107,7 @@ class CrudController extends Controller
      */
     public function destroy($id)
     {
-       $cliente = Clientes::find($id);
-       if (isset($cliente)){
-           $cliente->delete($id);
+       if (Clientes::deletarCliente($id)){
            return redirect('/');
        }else{
            return redirect('/');

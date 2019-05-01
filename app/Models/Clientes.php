@@ -33,5 +33,20 @@ class Clientes extends Model
         }
     }
 
+    static function atualizarCliente($request, $id)
+    {
+        if($cliente = Clientes::find($id)){
+            $cliente->nome = $request->input('nome');
+            $cliente->estado = $request->input('estado');
+            $cliente->carga = $request->input('carga');
+            $cliente->cargo_id = $request->input('cargo_id');
+            $cliente->save();
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+
 
 }

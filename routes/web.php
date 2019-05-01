@@ -3,8 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 
-//Route::resource('/', 'CrudController');
-Route::get('/', 'CrudController@index')->name('home');
+Route::resource('/', 'CrudController');
 
 Route::get('/crud/create', 'CrudController@create');
 
@@ -16,5 +15,3 @@ Route::get('crud/edit/{id}', 'CrudController@edit');
 
 Route::put('/crud/up/{id}', 'CrudController@update')->name('crud.update');
 
-//lembrar de cada metodo para cada funcao como PUT e POST
-// php artisan route:list

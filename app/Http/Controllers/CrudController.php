@@ -92,13 +92,7 @@ class CrudController extends Controller
      */
     public function update(ClienteFormRequest $request, $id)
     {
-        $cliente = Clientes::find($id);
-        if (isset($cliente)){
-            $cliente->nome = $request->input('nome');
-            $cliente->estado = $request->input('estado');
-            $cliente->carga = $request->input('carga');
-            $cliente->cargo_id = $request->input('cargo_id');
-            $cliente->save();
+        if (Clientes::atualizarCliente($request, $id)){
             return redirect('/');
         }else{
             return redirect('/');

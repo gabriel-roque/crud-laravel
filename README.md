@@ -17,9 +17,9 @@ DB_DATABASE=**DATABASENAME**<br>
 DB_USERNAME=**USER**<br>
 DB_PASSWORD=**PASS**<br>
 
-4- `php artisan key:generete` --- ira gerar a chave da app laravel no arquivo .env
+3.1 - `composer install`
 
-4.1 - `composer install`
+4- `php artisan key:generete` --- ira gerar a chave da app laravel no arquivo .env
 
 5- `php artisan migrate --seed` --- carregar as tabelas na base de dados e alguns registros
 
@@ -46,9 +46,9 @@ DB_DATABASE=**DATABASENAME**<br>
 DB_USERNAME=**USER**<br>
 DB_PASSWORD=**PASS**<br>
 
-4- `php artisan key: generete` --- will generate the laravel app key in the .env file
+3.1 - `composer install`
 
-4.1 - `composer install`
+4- `php artisan key: generete` --- will generate the laravel app key in the .env file
 
 5- `php artisan migrate --seed` --- load the tables in the database and some records
 
